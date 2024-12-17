@@ -1,0 +1,12 @@
+2024-12-17 15:59:19.727986-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO TODO(TITLE, DEADLINE, CREATED_AT) VALUES ([*]""estudar Spring', '2023-10-10', '2023-05-19 10:00:00.0'"; SQL statement:
+INSERT INTO TODO(TITLE, DEADLINE, CREATED_AT) VALUES ("estudar Spring', '2023-10-10', '2023-05-19 10:00:00.0' [42000-232]
+2024-12-17 15:59:30.703282-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO TODO(TITTLE, DEADLINE, CREATED_AT) VALUES ([*]""estudar Spring', '2023-10-10', '2023-05-19 10:00:00.0'"; SQL statement:
+INSERT INTO TODO(TITTLE, DEADLINE, CREATED_AT) VALUES ("estudar Spring', '2023-10-10', '2023-05-19 10:00:00.0' [42000-232]
+2024-12-17 16:00:06.441885-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO TODO(TITTLE, DEADLINE, CREATED_AT) VALUES ('estudar Spring', '2023-10-10', '2023-05-19 10:00:00.0'[*]"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO TODO(TITTLE, DEADLINE, CREATED_AT) VALUES ('estudar Spring', '2023-10-10', '2023-05-19 10:00:00.0' [42001-232]
+2024-12-17 16:01:39.107755-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO TODO(TITTLE, DEADLINE, CREATED_AT) VALUES ('estudar Spring' , '2023-10-10' , '2023-05-19 10:00:00.0'[*]"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO TODO(TITTLE, DEADLINE, CREATED_AT) VALUES ('estudar Spring' , '2023-10-10' , '2023-05-19 10:00:00.0' [42001-232]
