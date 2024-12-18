@@ -4,11 +4,18 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 
 @Entity
@@ -18,13 +25,18 @@ public class Todo {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
+    @Size(min = 3, max = 100)
     @Column(length = 100, nullable = false)
     private String tittle;
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
+    @NotNull
+    @FutureOrPresent
     @Column(nullable = false)
+    @DateTimeFormat(iso = ISO.DATE)
     private LocalDate deadline;
 
     @Column(nullable = true)
@@ -34,6 +46,9 @@ public class Todo {
         this.createdAt = LocalDateTime.now();
     }
 
+    public void taskFinished(){
+        this.finishedAt = LocalDate.now();
+    }
     public Long getId() {
         return id;
     }
